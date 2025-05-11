@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Кафедра ИТО</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* header {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 15px 50px;
+        background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      } */
+
+      .init {
+        width: 60px;
+      }
+
+      .nav {
+        color: white;
+        font-size: 16px;
+        position: relative;
+      }
+
+      .nav::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: #00c3ff;
+        bottom: -5px;
+        left: 0;
+        transition: width 0.3s;
+      }
+
+      .nav:hover::after {
+        width: 100%;
+      }
+
+      .fio {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 40px;
+      }
+
+      .kafedra {
+        max-width: 65%;
+      }
+
+      .h1 h1 {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+
+      .info_kaf p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .zof_kaf {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .zav_ito {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #00c3ff;
+        margin-bottom: 10px;
+      }
+
+      .zov_btn {
+        background: #00c3ff;
+        border: none;
+        padding: 10px 20px;
+        color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .d {
+        padding: 40px;
+      }
+
+      .page {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .dan-nav, .dann {
+        display: grid;
+        grid-template-columns: 80px repeat(7, 1fr) 100px;
+        align-items: center;
+        gap: 10px;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border-radius: 12px;
+      }
+
+      .dan-nav {
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .s {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #00c3ff;
+      }
+
+      .b {
+        background: #00c3ff;
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="background"></span>
+    <header>
+      <img class="init" src="./img/init.png" alt="init" />
+      <a class="nav" href="index.html">Главная</a>
+      <a class="nav" href="institute.html">Институт</a>
+      <a class="nav" href="news.html">Новости</a>
+      <a class="nav" href="documents.html">Документы</a>
+      <a class="nav" href="rewards.html">Достижения</a>
+    </header>
+    <div class="fio">
+      <div class="kafedra">
+        <div class="h1">
+          <h1>Кафедра информационных технологий в образовании</h1>
+        </div>
+        <div class="info_kaf">
+          <p>Кафедра занимается подготовкой высококвалифицированных специалистов в области IT. Мы обучаем программированию, веб-разработке, базам данных и другим дисциплинам, важным для образовательных технологий.</p>
+          <p>Наши преподаватели используют современные методики обучения, что позволяет студентам быть на шаг впереди.</p>
+          <p>Присоединяйтесь к нашей команде, чтобы быть частью будущего образования!</p>
+        </div>
+      </div>
+      <div class="zof_kaf">
+        <img class="zav_ito" src="./img/zav_ito.png" alt="Заведующий кафедрой">
+        <h3>Чороев Калыбек</h3>
+        <p class="var_p">Заведующий кафедрой</p>
+        <button class="zov_btn">Контакты</button>
+      </div>
+    </div>
+    <div class="d">
+      <div class="page active">
+        <p class="dan-nav">
+          <span>Фото</span>
+          <span>Фамилия</span>
+          <span>Имя</span>
+          <span>Отчество</span>
+          <span>Должность</span>
+          <span>Степень</span>
+          <span>Телефон</span>
+          <span>Email</span>
+          <span>Подробнее</span>
+        </p>
+        <!-- Здесь оставляем данные сотрудников в .dann как в вашем коде -->
+	
+			<div class="d">
+			  <div id="page1" class="page active">
+				
+				<p id="foto" class="dann">
+				  <span><img class="s" src="./img/asangyl.png" alt="z" /></span>
+				  <span>Алымбаев</span>
+				  <span>Асангул</span>
+				  <span>Темиркулович</span>
+				  <span>и.о.профессор</span>
+				  <span>д.ф-м.н.</span>
+				  <span>0708 778 228</span>
+				  <span>alymbaev@mail.ru</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/ainagyl.png" alt="z" class="s" /></span>
+				  <span>Анаркулова</span>
+				  <span>Айнагул</span>
+				  <span>Солтоевна</span>
+				  <span>Старший преподаватель</span>
+				  <span>Специалитет</span>
+				  <span>0706 187 243</span>
+				  <span>a_anarkulova@mail.ru</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/salyanat.png" alt="z" class="s" /></span>
+				  <span>Бийбосунова</span>
+				  <span>Салтанат</span>
+				  <span>Кенешбековна</span>
+				  <span>Доцент</span>
+				  <span>к.э.н</span>
+				  <span>0555 754 340</span>
+				  <span>bibosunovas@gmail.com</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/ainyr.png" alt="z" class="s" /></span>
+				  <span>Жолборсова</span>
+				  <span>Айнур</span>
+				  <span>Женишбековна</span>
+				  <span>Старший преподаватель</span>
+				  <span>Специалитет</span>
+				  <span>0552 767 825</span>
+		
+		The Diary, [08.05.2025 23:33]
+		<span>zholborsova76@mail.ru</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/bakyt.png" alt="z" class="s" /></span>
+				  <span>Жумагулов</span>
+				  <span>Бакытбек</span>
+				  <span>Толонбекович</span>
+				  <span>Преподаватель</span>
+				  <span>Магистр</span>
+				  <span>0707 239 407</span>
+				  <span>wikinit419@gmail.com</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/barchun.png" alt="z" class="s" /></span>
+				  <span>Иса кызы</span>
+				  <span>Барчын</span>
+				  <span>-</span>
+				  <span>Преподаватель</span>
+				  <span>Магистр</span>
+				  <span>0704 181 014</span>
+				  <span>isakyzybarcyn@gmail.com</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/aizada.jfif" alt="z" class="s" /> </span>
+				  <span>Исманова</span>
+				  <span>Айзада</span>
+				  <span>Аскаровна</span>
+				  <span>Старший преподаватель</span>
+				  <span>Специалитет</span>
+				  <span>0709 301 078</span>
+				  <span>aika-1978.kgu@mail.ru</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/lira.png" alt="z" class="s" /></span>
+				  <span>Садыкова</span>
+				  <span>Лира</span>
+				  <span>Жанышевна</span>
+				  <span>Старший преподаватель</span>
+				  <span>Специалитет</span>
+				  <span>0707 584 718</span>
+				  <span>slira87@mail.ru</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+			  </div>
+			  <div id="page2" class="page">
+				<!-- <p id="nav" class="dan-nav">
+				  <span>Фото</span>
+				  <span>Фамилия</span>
+				  <span>Имя</span>
+				  <span>Отчество</span>
+				  <span>Должность</span>
+				  <span>Степень</span>
+				  <span>Номер телефона</span>
+				  <span>Электронная почта</span>
+				  <span>Подробнее</span>
+				</p> -->
+				<p id="foto" class="dann">
+				  <span><img class="s" src="./img/Astra.png" alt="z" /></span>
+				  <span>Сартматова</span>
+				  <span>Астра</span>
+				  <span>Нурматовна</span>
+				  <span>Преподаватель</span>
+				  <span>Специалитет</span>
+				  <span>0702 608 685</span>
+				  <span>astrasartatova@gmail.com</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/Saikal.png" alt="z" class="s" /></span>
+				  <span>Сейдракманова</span>
+				  <span>Сайкал</span>
+				  <span>Назаркуловна</span>
+				  <span>Старший преподаватель</span>
+				  <span>Специалитет</span>
+				  <span>0708 272 106</span>
+				  <span>saikal_seidrak@mail.ru</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/Aiperi.png" alt="z" class="s" /></span>
+				  <span>Султанакунова</span>
+				  <span>Айпери</span>
+				  <span>Осмонбековна</span>
+				  <span>Преподаватель</span>
+				  <span>Магистр</span>
+				  <span>0707 139 113</span>
+				  <span>asultanakunova@inbox.ru</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/Gulmira.png" alt="z" class="s" /></span>
+				  <span>Султанбаева</span>
+				  <span>Гулмира</span>
+				  <span>Салымбаевна</span>
+				  <span>Доцент</span>
+				  <span>к.п.н., доцент</span>
+				  <span>0770 323 030</span>
+				  <span>sultanbaeva@mail.ru</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/Nurkyz.png" alt="z" class="s" /></span>
+				  <span>Толонбаева</span>
+				  <span>Нуркыз</span>
+				  <span>Толонбаевна</span>
+		
+		The Diary, [08.05.2025 23:33]
+		<span>Преподаватель</span>
+				  <span>Бакалавр</span>
+				  <span>0500 697 302</span>
+				  <span>ntolonbaeva1@gmail.com</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/Nurshat.png" alt="z" class="s" /></span>
+				  <span>Турдукожо кызы</span>
+				  <span>Нуршат</span>
+				  <span>-</span>
+				  <span>Старший преподаватель</span>
+				  <span>Магистр</span>
+				  <span>0707 231 508</span>
+				  <span>jazgul0603@gmail.com</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/Kalybek.png" alt="z" class="s" /></span>
+				  <span>Чороев</span>
+				  <span>Калыбек</span>
+				  <span>Чороевич</span>
+				  <span>и.о.профессор</span>
+				  <span>д.ф-м.н.</span>
+				  <span>0709 955 928</span>
+				  <span>choroev_k@mail.ru</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+				<p class="dann">
+				  <span><img src="./img/Ulanbek.png" alt="z" class="s" /></span>
+				  <span>Эсенгулов</span>
+				  <span>Уланбек</span>
+				  <span>Акбагышевич</span>
+				  <span>Доцент</span>
+				  <span>Специалитет</span>
+				  <span>0705 283 716</span>
+				  <span>None</span>
+				  <span><button class="b">Подробнее</button></span>
+				</p>
+			  </div>
+			</div>
+			
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
